@@ -1,2 +1,2 @@
 # nextJs-practice
-**This is a practice repository for next js**
+**This is a practice repository for Next Js project**
