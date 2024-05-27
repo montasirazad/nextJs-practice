@@ -3,12 +3,11 @@ import Button from "@/app/components/Button";
 const Setting = () => {
   //console.log("setting page");
 
-  const handleClick = () => {};
-
   return (
     <div className="text-center">
       <h1 className="mt-5 text-2xl text-orange-600 ">Setting page</h1> <br />
       <Button> Go to analytics</Button>
+      <span className="text-4xl text-green-700">&#128160;</span>
     </div>
   );
 };
