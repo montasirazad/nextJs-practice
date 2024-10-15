@@ -11,10 +11,11 @@ export function getDocuments() {
   const allDocuments = fileNames.map((fileName) => {
     const id = fileName.replace(".md", "");
     const pathName = path.join(postsDirectory, fileName);
+
     const fileContents = fs.readFileSync(pathName, "utf8");
     const matterResult = matter(fileContents);
 
-    console.log(matterResult.data);
+    //console.log(matterResult.data);
     return {
       id,
       ...matterResult.data,

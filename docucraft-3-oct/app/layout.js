@@ -1,3 +1,4 @@
+import { getDocument } from "@/lib/doc";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -18,6 +19,8 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const allDocuments = getDocument();
+  console.log(allDocuments);
   return (
     <html lang="en">
       <body

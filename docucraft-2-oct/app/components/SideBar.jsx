@@ -7,7 +7,7 @@ const SideBar = ({ docs }) => {
     docs.filter((doc) => doc.parent),
     ({ parent }) => parent
   );
-  //console.log(nonRoots);
+  //console.log("all non roots", nonRoots);
 
   return (
     <nav className="hidden lg:mt-10 lg:block">
@@ -26,7 +26,7 @@ const SideBar = ({ docs }) => {
             </Link>
             {nonRoots[rootNode.id] && (
               <ul role="list" className="border-l border-transparent">
-                {console.log('nonRoots[rootNode.id]',nonRoots[rootNode.id])}
+                {/* {console.log('nonRoots[rootNode.id]',nonRoots[rootNode.id])} */}
                 {nonRoots[rootNode.id].map((subRoot) => (
                   <li key={subRoot.id} className="relative">
                     <Link
