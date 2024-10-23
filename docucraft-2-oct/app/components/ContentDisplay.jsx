@@ -11,7 +11,7 @@ const ContentDisplay = async ({ id }) => {
       <div>
         <span>
           Published On:{documentContent.date} by{" "}
-          <Link href={`/author/${documentContent.author}`}>
+          <Link href={`/authors/${documentContent.author}`}>
             {documentContent.author}
           </Link>{" "}
           under the{" "}

@@ -6,7 +6,9 @@ const SideBarNav = ({ docs }) => {
     docs.filter((doc) => doc.parent),
     ({ parent }) => parent
   );
-  //console.log("non roots", nonRoots);
+ 
+ 
+
 
   return (
     <nav className="hidden lg:mt-10 lg:block">

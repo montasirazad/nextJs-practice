@@ -1,9 +1,10 @@
 import { getDocumentContent } from "@/lib/doc";
 import Link from "next/link";
+import Tag from "./Tag";
 
 const ContentDisplay = async ({ id }) => {
   const documentContent = await getDocumentContent(id);
-  console.log(documentContent);
+  //console.log(documentContent);
   return (
     // <h1>{id}</h1>
     <article className="prose dark:prose-invert">
@@ -11,14 +12,23 @@ const ContentDisplay = async ({ id }) => {
       <div>
         <span>
           Published On:
-          {/* {documentContent.date} */}
+          {documentContent.date}
         </span>{" "}
-        by <Link href={`/author/ `}>{/* {documentContent.author} */}</Link>{" "}
+        by{" "}
+        <Link href={`/author/${documentContent.author}`}>
+          {documentContent.author}
+        </Link>{" "}
         under the{" "}
-        <Link href={`/categories/ `}>{/* {documentContent.category} */}</Link>{" "}
+        <Link href={`/categories/${documentContent.category}`}>
+          {documentContent.category}
+        </Link>{" "}
         category.
       </div>
-      <div></div>
+      <div>
+        {" "}
+        {documentContent.tags &&
+          documentContent.tags.map((tag) => <Tag key={tag} tag={tag} />)}
+      </div>
       <div
         className="lead"
         dangerouslySetInnerHTML={{ __html: documentContent.contentHtml }}
