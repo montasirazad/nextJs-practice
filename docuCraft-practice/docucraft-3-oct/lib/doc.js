@@ -40,7 +40,7 @@ export async function getDocumentContent(id) {
     .use(html)
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
-  console.log(contentHtml);
+  //console.log(contentHtml);
   return {
     id,
     contentHtml,

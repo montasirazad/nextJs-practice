@@ -32,8 +32,9 @@ const SideBar = ({ docs }) => {
       matchedDocs.filter((doc) => doc.parent),
       ({ parent }) => parent
     );
-
+    console.log(nonRoots);
     const nonRootKeys = Reflect.ownKeys(nonRoots);
+
     nonRootKeys.forEach((key) => {
       const foundInRoots = roots.find((root) => root.id === key);
       if (!foundInRoots) {
@@ -41,6 +42,7 @@ const SideBar = ({ docs }) => {
         roots.push(foundInDocs);
       }
     });
+
     roots.sort((a, b) => {
       if (a.order < b.order) {
         return -1;
@@ -60,6 +62,7 @@ const SideBar = ({ docs }) => {
         <div className="absolute inset-x-0 top-0 bg-zinc-800/2.5 will-change-transform dark:bg-white/2.5"></div>
         <div className="absolute inset-y-0 left-2 w-px bg-zinc-900/10 dark:bg-white/5"></div>
         <div className="absolute left-2 h-6 w-px bg-emerald-500"></div>
+
         {rootNodes.map((rootNode) => (
           <li key={rootNode.id} className="relative">
             <Link
