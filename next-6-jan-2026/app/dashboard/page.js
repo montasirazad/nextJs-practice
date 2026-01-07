@@ -1,6 +1,6 @@
 import Button from "../components/Button";
 
-const dashboard = () => {
+const Dashboard = () => {
   return (
     <div className="text-center">
       <p>Dashboard page</p>
@@ -9,4 +9,4 @@ const dashboard = () => {
   );
 };
 
-export default dashboard;
+export default Dashboard;
