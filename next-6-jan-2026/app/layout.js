@@ -35,6 +35,9 @@ export default function RootLayout({ children }) {
             <li>
               <CustomLink path={"/dashboard"}>Dashboard</CustomLink>
             </li>
+             <li>
+              <CustomLink path={"/blogs"}>Blogs</CustomLink>
+            </li>
           </ul>
         </nav>
         {children}
